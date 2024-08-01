@@ -1,0 +1,8 @@
+FROM node:alpine3.18
+ENV NODE_ENV development
+WORKDIR /Infocrawler
+COPY ./package.json /Infocrawler
+RUN npm install 
+COPY .  .  
+EXPOSE 3000
+CMD npm start
